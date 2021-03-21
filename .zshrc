@@ -87,6 +87,7 @@ plugins=(
   fzf
   zsh-autosuggestions
   zsh-syntax-highlighting
+  alias-finder
    )
 
 source $ZSH/oh-my-zsh.sh
