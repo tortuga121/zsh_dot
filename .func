@@ -1,0 +1,42 @@
+
+function mkd() {
+  mkdir -p $@
+  cd $@
+}
+
+function cdf() { # short for `cdfinder`
+	cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
+}
+
+function o() {
+	if [ $# -eq 0 ]; then
+		open .;
+	else
+		open "$@";
+	fi;
+}
+
+function fs() {
+	if du -b /dev/null > /dev/null 2>&1; then
+		local arg=-sbh;
+	else
+		local arg=-sh;
+	fi
+	if [[ -n "$@" ]]; then
+		du $arg -- "$@";
+	else
+		du $arg .[^.]* .;
+	fi;
+}
+
+function tre() {
+	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
+}
+
+function weather() {
+  curl 'wttr.in/~'${1:-Braga}'+'$2'?'${3:-0}
+}
+function show_ip() {
+    #wlp3s0
+  ifconfig | awk '$1 == "inet" {print $2}'
+}

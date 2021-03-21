@@ -1,0 +1,29 @@
+# MAKE 
+alias mk=make
+alias mkc="make clean"
+alias mkr="make run"
+alias mkt="make test"
+# GIT
+alias ga="git add"
+alias gd="git --no-pager diff --patch-with-stat"
+alias gc="git checkout"
+alias gl="git log --all --graph --decorate --oneline"
+alias gs="git status -s"
+alias gm="git commit -m "
+# LS
+colorflag="-G"
+alias ls="command ls ${colorflag} "
+alias ll="ls -lF ${colorflag}"
+alias la="ls -A ${colorflag}"
+alias lla="ls -lAF ${colorflag}"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# RELOAD SHELL
+alias reload="exec ${SHELL} -l"
