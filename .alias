@@ -25,5 +25,6 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
+alias update=' brew update; brew upgrade; brew cleanup;'
 # RELOAD SHELL
 alias reload="exec ${SHELL} -l"

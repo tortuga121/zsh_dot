@@ -88,7 +88,8 @@ plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
   alias-finder
-   )
+  gitignore
+  )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -123,3 +124,6 @@ source $ZSH/oh-my-zsh.sh
 
 source /Users/daniel/.config/zsh/.alias
 source /Users/daniel/.config/zsh/.func
+
+# To customize prompt, run `p10k configure` or edit /Users/daniel/.config/zsh/.p10k.zsh.
+[[ ! -f /Users/daniel/.config/zsh/.p10k.zsh ]] || source /Users/daniel/.config/zsh/.p10k.zsh
