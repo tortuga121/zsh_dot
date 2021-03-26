@@ -7,7 +7,7 @@ alias mkt="make test"
 alias ga="git add"
 alias gd="git --no-pager diff --patch-with-stat"
 alias gc="git checkout"
-alias gl="git log --graph --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=short"
+alias gl="git --no-pager log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=short"
 alias gs="git status -sb"
 alias gm="git commit -m "
 # LS

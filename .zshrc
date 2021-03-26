@@ -89,6 +89,9 @@ plugins=(
   zsh-syntax-highlighting
   alias-finder
   gitignore
+  sudo
+  zsh-interactive-cd
+  npm
   )
 
 source $ZSH/oh-my-zsh.sh
