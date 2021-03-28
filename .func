@@ -36,7 +36,3 @@ function tre() {
 function weather() {
   curl 'wttr.in/~'${1:-Braga}'+'$2'?'${3:-0}
 }
-function show_ip() {
-    #wlp3s0
-  ifconfig | awk '$1 == "inet" {print $2}'
-}

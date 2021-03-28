@@ -1,15 +1,22 @@
+#NAVIGATION
+alias down="cd ~/Downloads"
+alias desk="cd ~/Desktop"
 # MAKE 
 alias mk=make
 alias mkc="make clean"
 alias mkr="make run"
 alias mkt="make test"
 # GIT
-alias ga="git add"
+alias ga="git add . "
 alias gd="git --no-pager diff --patch-with-stat"
-alias gc="git checkout"
-alias gl="git --no-pager log --graph --pretty='%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=short"
-alias gs="git status -sb"
-alias gm="git commit -m "
+alias gcb="git checkout -B"
+alias gl="git --no-pager log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --date=short --abbrev-commit --branches"
+alias gs="git status -sb "
+alias gpush="git push "
+alias gpull="git pull "
+alias gsu="git push --set-upstream origin "
+unalias gcm
+function gcm { git commit -m "$@"; }
 # LS
 colorflag="-G"
 alias ls="command ls ${colorflag} "
@@ -25,6 +32,10 @@ alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && kil
 alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
 alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
 
-alias update=' brew update; brew upgrade; brew cleanup;'
+alias update='brew update; brew upgrade; brew cleanup;'
 # RELOAD SHELL
 alias reload="exec ${SHELL} -l"
+#Print IP
+alias myip="curl http://ipecho.net/plain; echo"
+# top dirs
+alias dirs="dirs -v | head -10"
