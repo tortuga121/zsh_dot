@@ -14,7 +14,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 export ZDOTDIR="/Users/daniel/.config/zsh"
 
 export FZF_BASE=/path/to/fzf/install/dir
-
+#change time command format bash-like
+TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S'
 
 plugins=(
   git
@@ -27,8 +28,7 @@ plugins=(
   alias-finder
   gitignore
   sudo
-  zsh-interactive-cd
-  npm
+  web-search
   )
 
 source $ZSH/oh-my-zsh.sh
@@ -49,3 +49,5 @@ source /Users/daniel/.config/zsh/.func
 
 # To customize prompt, run `p10k configure` or edit /Users/daniel/.config/zsh/.p10k.zsh.
 [[ ! -f /Users/daniel/.config/zsh/.p10k.zsh ]] || source /Users/daniel/.config/zsh/.p10k.zsh
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

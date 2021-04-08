@@ -39,3 +39,4 @@ alias reload="exec ${SHELL} -l"
 alias myip="curl http://ipecho.net/plain; echo"
 # top dirs
 alias dirs="dirs -v | head -10"
+alias cp_clion="cp src/*.c $HOME/uni/aux; cp includes/*.h $HOME/uni/aux; cp input/*.csv $HOME/uni/aux/cmake-build-debug"
