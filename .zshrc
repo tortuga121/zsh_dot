@@ -29,7 +29,7 @@ plugins=(
   gitignore
   sudo
   web-search
-  )
+)
 
 source $ZSH/oh-my-zsh.sh
 
