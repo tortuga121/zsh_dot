@@ -51,3 +51,6 @@ source /Users/daniel/.config/zsh/.func
 [[ ! -f /Users/daniel/.config/zsh/.p10k.zsh ]] || source /Users/daniel/.config/zsh/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+test -e "${ZDOTDIR}/.iterm2_shell_integration.zsh" && source "${ZDOTDIR}/.iterm2_shell_integration.zsh"
+

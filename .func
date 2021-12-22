@@ -25,7 +25,7 @@ function fs() {
 	if [[ -n "$@" ]]; then
 		du $arg -- "$@";
 	else
-		du $arg .[^.]* .;
+		du -sh [^.]*; du -sh .[^.]
 	fi;
 }
 
